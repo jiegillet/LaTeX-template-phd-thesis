@@ -20,7 +20,7 @@
 %-------------------------------------------------------------------------------
 
 \if@final
-	\LoadClass[12pt, twoside]{book} % 12 pt font, two-sided book style
+	\LoadClass[12pt, oneside]{book} % 12 pt font, one-sided book style
 	
 	\RequirePackage[a4paper, includehead, headheight=0.6cm, inner=3cm ,outer=2.5cm, top=2.5 cm, bottom=2.5cm]{geometry}  % Changing size of document
 	
@@ -31,9 +31,9 @@
 	
 	\newcommand{\numberedchapter}{ % Preparation for numbered chapters
 		\cleardoublepage % To make sure the previous headers are passed
-		\fancyhead[RE]{{\bfseries \leftmark}}% Headers for left pages
+		\fancyhead[RE]{{\bfseries \leftmark}} % Headers for left pages
 		\fancyhead[LO]{{\bfseries \rightmark}}
-	}% Headers for right pages
+	} % Headers for right pages
 	
 	\newcommand{\unnumberedchapter}[1]{ % Preparation for unnumbered chapters
 		\cleardoublepage % To make sure the previous headers are passed
