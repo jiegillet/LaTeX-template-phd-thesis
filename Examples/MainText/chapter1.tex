@@ -225,7 +225,7 @@ with the real coefficients $a_{ij}$ defined as $a_{ij} \equiv 4 \tr{A S_i \otime
 We can see that if $S_k$ and $S_i$ commute, one only needs to switch their order in Eq. (\ref{eq-A2pt}) and rename $i$ as $k$ and vice versa for the matrices to be equal. However, given the commutation property (\ref{eq-Scomm}), it is clear that in general they do not do so and the only matrix that is assured to commute with all others is the identity matrix $S_0$. The same can be said of $S'_j$ and $S'_l$ and therefore, we see that every term with a $0$ index in (\ref{eq-Apt2}) will be found exactly the same in (\ref{eq-A2pt}), which means there are no restrictions on the values of the $a_{ij}$ coefficients when $i$ or $j$ is zero. For the rest of the $(n-1)\times(n'-1)$ coefficients, we need to investigate  further. Letting go of all the terms including a zero index, we find that the quantities (\ref{eq-Apt2}) and (\ref{eq-A2pt}) are equal if and only if
 \begin{eqnarray}
   0 &=& (a_{ij} a_{kl}-a_{kj} a_{il})  (S_k S_i)^{\textrm{T}}  \otimes S'_j S'_l, \\
-  &=& \frac 1 4 (a_{ij} a_{kl}-a_{kj} a_{il}) \left( \delta_{ki} \frac{I_n}n + (if_{kip} + d_{kip})S_p^{\textrm{T}}  \right)\otimes \left(\delta_{jl} \frac{I_{n'}}{n'} +(if'_{jlq} + d'_{jlq}) S'_q\right),\\
+  &=& \frac 1 4 (a_{ij} a_{kl}-a_{kj} a_{il}) \left( \delta_{ki} \frac{I_n}n + (if_{kip} + d_{kip})S_p^{\textrm{T}}  \right)\otimes \left(\delta_{jl} \frac{I_{n'}}{n'} +(if'_{jlq} + d'_{jlq}) S'_q\right), \nonumber \\
   &=& \frac 1 4 (a_{ij} a_{kl}-a_{kj} a_{il}) \left( (if_{kip} + d_{kip}) S_p^{\textrm{T}} \right)\otimes \left((if'_{jlq} + d'_{jlq}) S'_q\right),\\
   &=&  -\frac 1 4 f_{kip}f'_{jlq}   (a_{ij} a_{kl}-a_{kj} a_{il})  S_p^{\textrm{T}}  \otimes S'_q ,\\
   &=&  -\frac 1 2  f_{kip}f'_{jlq}  a_{ij} a_{kl} S_p^{\textrm{T}}  \otimes S'_q, \\
@@ -298,7 +298,7 @@ The case of mixed states is a more complicated one. To this date, there is still
 
 We will now discuss some applications of the SRPT inequality starting by the bipartite case.
 
-\subsubsection{2D Harmonic Oscillator.}
+\subsubsection{2D Harmonic Oscillator}
 
 We consider entanglement in states of an isotropic two dimensional oscillator with definite energy and angular momentum (see e.g.~Ref.~\cite{Mai01} describing the experimental production of entangled angular momentum states of photons). Those states are the common eigenvectors $\ket{\psi_{k,M}}$ ($k, M$ integers) of the hamiltonian
 \[ H=\hbar \omega(a a^\dagger + b b^\dagger +1),\]
@@ -318,7 +318,7 @@ with $\sigma_x^{(i,j)} \equiv \ketbra{i}{j} +\ketbra{j}{i}$ and $i+j =n$ which y
 \[ |c_i||c_j|=|c_i|^2 \le 0 ,\]
 evidently violated for $i=0$, but in general for several other values as well.
 
-\subsubsection{Multiphoton Polarization State.}
+\subsubsection{Multiphoton Polarization State}
 
 For some particular experiments, the SRPT inequality can be particularly efficient. Here, we show that on some multiphoton polarization states, the detection of entanglement only involves the measurement of two projectors. Let us consider the entangled two-photon state
 \[ \ket\psi = \alpha \ket{0,2} + \beta \ket{1,1} + \gamma \ket{2,0}, \label{eq-multi} \]
@@ -328,7 +328,7 @@ and dropping the commutator term in (\ref{eq-SRPT}), we get the inequality $0 \g
 \[ \{A,B\pt \}= \ketbra{02}{20}+\ketbra{20}{02} = \ketbra{\psi^+}{\psi^+}-\ketbra{\psi^-}{\psi^-}, \]
 with $\ket{\psi^\pm}\equiv (\ket{02} \pm \ket{20})/\sqrt 2$. More generally, the entanglement of an $N$-photon state of the form $\sum_{i=0}^N c_i \ket{i,N-i }$  will always be easily detectable with similar observables.
 
-\subsubsection{Cat States.}
+\subsubsection{Cat States}
 
 In quantum electrodynamics (QED), a coherent state $\alpha$ is defined to be an eigenstate of the annihilation operator $a$, with the eigenvalue $\alpha$, i.~e.~$a \ket\alpha=\alpha\ket\alpha$ and can be written as
 \[ \ket \alpha =e^{-\frac{|\alpha|^2}{2}}\sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} \ket n, \]
@@ -421,7 +421,7 @@ is fully separable. Therefore, there is always an SRPT inequality able to detect
 
 An interesting result is the fact that a pair of bipartite operators can never detect a GHZ-type state. Indeed, the expectation value of an observable $A$ on a GHZ-type state expressed as in Eq.~(\ref{eq-3qb}) will be a combination of the terms $\langle 000 |A| 000\rangle$, $\langle 000 |A| 111\rangle$, $\langle 111 |A| 000\rangle$ and $\langle 111 |A| 111\rangle$. If $A$ is a bipartite observable acting, e.g., on the first two subsystems, we have $\langle 000 |A| 111\rangle = \langle 00 |A_{12}| 11\rangle  \langle 0|I_2|1\rangle = 0$. Thus, the mean value of the observable $A$ acting on a GHZ-type state is the same as if $A$ were acting on a separable state of the form $\rho=\lambda_0^2 \ketbra{000}{000} + \lambda_4^2 \ketbra{111}{111}$. Therefore there cannot be any violation of an SRPT inequality.
 
-%\subsubsection{3D harmonic oscillator.} 
+%\subsubsection{3D harmonic oscillator}
 %
 %We consider entanglement in the angular momentum states of a three-dimensional harmonic oscillator. Those states are the common eigenvectors $\ket{\psi_{k,l,m}}$ ($k, l, m$ integers, $|m| \le l$) of the hamiltonian $H=\omega(a a^\dagger + b b^\dagger + c c^\dagger + 3/2)$
 %($a$, $b$, $c$ are the oscillator annihilation operators according to the 3 directions $x$, $y$ and $z$, respectively), the squared total angular momentum $L^2$~\footnote{$L^2=-(a^2 b^{\dagger 2} +a^{\dagger 2} b^2 +a^2 c^{\dagger 2} + a^{\dagger 2} c^2+b^2 c^{\dagger 2} + b^{\dagger 2} c^2) + 2(a a^\dagger b b^\dagger +a a^\dagger c c^\dagger + b b^\dagger c c^\dagger+ a a^\dagger + b b^\dagger + c c^\dagger)$.}, and the angular momentum $z$-component $L_z =i (a b^\dagger - a^\dagger b)$ with eigenvalues $\omega(n + 3/2)$ (with $n=2k + l$), $l(l+1)$ and $m$, respectively. The states $\ket{\psi_{k,l,m}}$ can always be expressed in the number state basis $\ket{n_1,n_2,n_3}$ as $\sum_{i=0}^n\sum_{j=0}^i c_{ij} \ket{j,i-j,n-i}$ and
@@ -437,7 +437,7 @@ An interesting result is the fact that a pair of bipartite operators can never d
 
 Let us now investigate the performances of the SRPT criterion on mixed states.
 
-\subsubsection{Bipartite Werner States.}
+\subsubsection{Bipartite Werner States}
 
 The generalization of the SRPT criterion to mixed states is a difficult task. We may try, as an illustrative example, to detect the Werner mixed state ~\cite{Wer89}
 \[ \rho_x = x \ketbra{\psi}{\psi} +  (1-x)\frac{I_4}4\]
@@ -461,7 +461,7 @@ our SRPT inequality detects the entanglement of  $\rho_W$ when $x > 2/(1+\sqrt{1
 
 In the particular case when $\ket\psi$ is the Bell state $\ket{\phi^\pm}$, i.~e.~when $a=\pm b = 1/ \sqrt 2$, and $\varphi=0$, $\rho_x$ is entangled if and only if $x > 1/3$ whereas it is detected via the SRPT inequality  when $x > 1/2$. This result improves the limits of detection given by the Bell inequalities ($x > 1 / {\sqrt 2}$, see~\cite{Per96}) or by the uncertainty relations of G\"uhne~\cite{Guh04} ($x> 1/{\sqrt 3}$).
 
-\subsubsection{Multipartite Werner States.}
+\subsubsection{Multipartite Werner States}
 
 The SRPT inequality can be applied on mixed states of multipartite systems. Let us look at its results on the $N$-dimensional Werner mixed state
 \[ \rho(x)= x \ketbra{\mbox{GHZ}_N}{\mbox{GHZ}_N} +(1-x)\frac{I_{2^N}}{2^N},\]
