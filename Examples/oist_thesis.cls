@@ -29,66 +29,38 @@
 
 \if@final
     \RequirePackage[labelfont=bf, figurewithin=none, tablewithin=none]{caption} % caption: FIG in bold, so spacing in tables
-    \RequirePackage{emptypage} % Remove headers of empty pages
-
 	\newcommand{\thesisspacing}{\singlespacing}
-	
-	% TODO: figure out which headers we want on one-side final thesis
-	\newcommand{\numberedchapter}{ % Preparation for numbered chapters
-		\fancyhead[RE]{{\bfseries \leftmark}} % Headers for left pages
-		\fancyhead[LO]{{\bfseries \rightmark}}
-	} % Headers for right pages
-	
-	\newcommand{\unnumberedchapter}[1]{ % Preparation for unnumbered chapters
-		\cleardoublepage % To make sure the previous headers are passed
-		\phantomsection % To help hyperref link to the right page
-		\addcontentsline{toc}{chapter}{#1} % Also adds the chapter name to the Contents
-		\fancyhead[RE]{{\bfseries #1}} % Headers for left pages
-		\fancyhead[LO]{}
-	}%Headers for right pages
-
-	\newcommand{\startpreamble}{
-		\pagestyle{fancy} % Changes the headers
-		\fancyhf{}% Clears header and footer
-		\renewcommand{\chaptermark}[1]{\markboth{##1}{}} % Getting the chapter name right
-		\renewcommand{\sectionmark}[1]{\markright{\thesection\; ##1}} % Getting the section name right
-		\fancyhead[RO,LE]{\thepage} % page number on the outside of headers
-		\setcounter{page}{2} % Include the title page in page counting
-		\thesisspacing % Double spacing
-	}
-
 	\newcommand{\includepublications}{}
 \else
 	\RequirePackage[labelfont=bf, figurewithin=none, tablewithin=none, font=onehalfspacing]{caption} % caption: FIG in bold, so spacing in tables, 1.5 line spacing in figure and table captions
-
 	\newcommand{\thesisspacing}{\doublespacing}
-
-	\newcommand{\numberedchapter}{ % Preparation for numbered chapters
-		\cleardoublepage % To make sure the previous headers are passed
-		\lhead{\bfseries \leftmark} % Header
-	}
-	
-	\newcommand{\unnumberedchapter}[1]{ % Preparation for unnumbered chapters
-		\cleardoublepage % To make sure the previous headers are passed
-		\phantomsection % To help hyperref link to the right page
-		\addcontentsline{toc}{chapter}{#1} % Also adds the chapter name to the Contents
-		\lhead{\bfseries #1} % Header
-	}
-
-	\newcommand{\startpreamble}{
-		\pagestyle{fancy} % Change the header style
-		\fancyhf{}% Clear header and footer
-		\renewcommand{\chaptermark}[1]{\markboth{##1}{}} % Getting the chapter name right
-		\rhead{\thepage} % Page number at the right of the header
-		\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the preamble pages
-		\setcounter{page}{2} % Include the title page in page counting
-		\thesisspacing % Double or single spacing
-	}
-
 	\newcommand{\includepublications}{
 		\input{./MainText/publications}
 	}
 \fi
+
+\newcommand{\unnumberedchapter}[1]{ % Preparation for unnumbered chapters
+	\cleardoublepage % To make sure the previous headers are passed
+	\phantomsection % To help hyperref link to the right page
+	\addcontentsline{toc}{chapter}{#1} % Also adds the chapter name to the Contents
+	\lhead{\bfseries #1} % Header
+}
+
+\newcommand{\numberedchapter}{ % Preparation for numbered chapters
+	\cleardoublepage % To make sure the previous headers are passed
+	\lhead{\bfseries \rightmark} % Header
+}
+
+\newcommand{\startpreamble}{
+	\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the preamble pages
+	\pagestyle{fancy} % Change the header style
+	\fancyhf{}% Clear header and footer
+	\renewcommand{\chaptermark}[1]{\markboth{##1}{}} % Getting the chapter name right
+	\renewcommand{\sectionmark}[1]{\markright{\thesection\; ##1}} % Getting the section name right
+	\rhead{\thepage} % Page number at the right of the header
+	\setcounter{page}{2} % Include the title page in page counting
+	\thesisspacing % Double or single spacing
+}
 
 %-------------------------------------------------------------------------------
 %	BUILDING THE TITLE PAGE
