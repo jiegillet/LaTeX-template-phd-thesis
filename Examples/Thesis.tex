@@ -135,10 +135,16 @@
 \unnumberedchapter{Table of Contents}
 \renewcommand\contentsname{Table of Contents}
 \tableofcontents % Write out the Table of Contents
-\unnumberedchapter{List of Figures}
-\listoffigures % Write out the List of Figures
-\unnumberedchapter{List of Tables}
-\listoftables % Write out the List of Tables
+
+{
+	% Hack: temporarily override addvspace to avoid spaces between chapters in lof/lot
+	\renewcommand{\addvspace}[1]{}
+
+	\unnumberedchapter{List of Figures}
+	\listoffigures % Write out the List of Figures
+	\unnumberedchapter{List of Tables}
+	\listoftables % Write out the List of Tables
+}
 
 %-------------------------------------------------------------------------------
 %	THESIS MAIN TEXT
