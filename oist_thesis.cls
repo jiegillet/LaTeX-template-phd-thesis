@@ -33,8 +33,8 @@
 
 	\newcommand{\thesisspacing}{\singlespacing}
 	
+	% TODO: figure out which headers we want on one-side final thesis
 	\newcommand{\numberedchapter}{ % Preparation for numbered chapters
-		\cleardoublepage % To make sure the previous headers are passed
 		\fancyhead[RE]{{\bfseries \leftmark}} % Headers for left pages
 		\fancyhead[LO]{{\bfseries \rightmark}}
 	} % Headers for right pages
