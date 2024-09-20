@@ -4,7 +4,9 @@ set -euox pipefail
 # setup
 cp oist_thesis.cls Examples/oist_thesis.cls
 cd Examples
-cp Thesis.tex Thesis_backup.tex
+mv Thesis.tex Backup_Thesis.tex
+rm -f Thesis.* # remove auxillary files
+cp Backup_Thesis.tex Thesis.tex
 
 # Thesis final version
 pdflatex Thesis.tex
@@ -23,5 +25,5 @@ mv Thesis.pdf Thesis_temporary_version.pdf
 
 # cleanup
 rm Thesis.*
-mv Thesis_backup.tex Thesis.tex
+mv Backup_Thesis.tex Thesis.tex
 cd ..
