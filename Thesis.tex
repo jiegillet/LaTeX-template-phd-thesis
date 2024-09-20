@@ -69,6 +69,14 @@
 \bibliographystyle{abbrvnat} % You may use a different style adapted to your field
 
 %-------------------------------------------------------------------------------
+%	FOR THESIS BY PUBLICATION ONLY (delete section otherwise)
+%-------------------------------------------------------------------------------
+
+\usepackage[labeled, resetlabels]{multibib}
+\newcites{Pub}{List of Publications} % Create separate bibliography for your publications
+\bibliographystylePub{abbrvnat} % You may use a different style adapted to your field
+
+%-------------------------------------------------------------------------------
 %	TITLE PAGE
 %-------------------------------------------------------------------------------
 
@@ -96,6 +104,14 @@
 \input{Preamble/glossary}
 \input{Preamble/nomenclature}
 \input{Preamble/dedication}
+
+%-------------------------------------------------------------------------------
+%	FOR THESIS BY PUBLICATION ONLY (delete section otherwise)
+%-------------------------------------------------------------------------------
+
+\unnumberedchapter{List of Publications} % Title of the unnumbered chapter
+\nocitePub{*} % Include all citations from Preamble/Thesis_publications.bib in order
+\bibliographyPub{Preamble/Thesis_publications} % The references are in "Preamble/Thesis_publications.bib"
 
 %-------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES
@@ -133,8 +149,8 @@
 %-------------------------------------------------------------------------------
 
 \unnumberedchapter{Reference List} % Title of the unnumbered chapter
-\renewcommand\bibname{Reference List}
-\bibliography{Preamble/Thesis_bibliography} % The references information are stored in the file named "Thesis_bibliography.bib"
+\renewcommand\bibname{Reference List} % Title of the bibliography
+\bibliography{Preamble/Thesis_bibliography} % The references are in "Preamble/Thesis_bibliography.bib"
 
 %-------------------------------------------------------------------------------
 %	APPENDICES (optional)
